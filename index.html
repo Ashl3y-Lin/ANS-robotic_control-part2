@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control (Part 2)</title>
+
+    <link rel="icon" href="https://i.ibb.co/9Ztfdxp/ROBOTICS.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="dropdown-sidebar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="quizSection.css">
+</head>
+<body>
+
+    <!-- 3 columns -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/#home"><img src="https://i.ibb.co/fChm6F5/home-icon-silhouette.png" alt=""> Home ⌄ </img></a>
+                    <ul  class="dropdown">
+                        <ul  class="dropdown">
+                            <li><a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/#accordion-steps">Begin?</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/#guidance-div">10_Topics</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/#accordion-questions"> Questions</a></li>
+                        </ul>
+                    </ul>
+                </li>
+                
+                <li class="with-dropdown">
+                    <a href="#topic-buttons"><img src="https://i.ibb.co/8XYKTgh/reading-book-1.png" alt=""> Topics ⌄ </img></a>
+                    <ul  class="dropdown">
+                        <li><a href="https://ashl3y-lin.github.io/ANS-robotic_movement-part1/">Movement</a></li>
+                        <li><a href="https://ashl3y-lin.github.io/ANS-Robotic_motor-part1/">Motor</a></li>
+                        <li><a href="https://ashl3y-lin.github.io/ANS-robotic_display/">Display</a></li>
+                        <li><a href="https://ashl3y-lin.github.io/ANS-robotic_sound/">Sound</a></li>
+                        <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/">Control</a></li>
+                        <li><a href="#">Sensors</a></li>
+                        <li><a href="#">Event</a></li>
+                        <li><a href="#">Operator</a></li>
+                        <li><a href="#">Variable</a></li>
+                        <li><a href="#">My Block</a></li>
+
+                    </ul>
+                </li>
+               
+                <li><a href="#wro"><img src="https://i.ibb.co/Drnm7cM/competition.png" alt=""> About WRO ⌄ </img></a>
+                    <ul  class="dropdown">
+                        <li><a href="#">WRO?</a></li>
+                        <li><a href="#">ANS_journey</a></li>
+                        <li><a href="#">Tips</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdrown of WRO: experiences. tips -->
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="wrapper">
+        <div class="header-content" id="movement-home">
+            <h1>Control (Part 2)</h1>
+            <div>
+                <p>
+                    -> Control blocks are what tell your robot what to do and when to do it by using "Loops"
+                </p>
+                <p>-> A loop is like a magic spell that says, "Do this action again and again until I say stop!"</p>
+            </div>
+            <!-- <div class="side-side">
+                <a href="https://ibb.co/HzCpGVx"><img src="https://i.ibb.co/DCYgwt8/Pink-arrows.png" alt="Pink-arrows" height="150"></a>
+                <img src="https://i.ibb.co/QKZ28Yz/Pink-blocks.png" alt="Pink-blocks" height="150">
+            </div>
+              -->
+        </div>
+            
+            <div class="side-bar">
+                <div class="menu">
+                    <div class="item">
+                        <div class="movement-logo"><a href="#movement-home"><img src="https://i.ibb.co/rx4hDY0/logo-control.png" height="90" alt="control-logo"></a>
+                        </div>
+                        
+
+                        <a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#movement-home"><span class="side-bar-title-1">Part 1</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#below-header" class="sub-item"> The Loops</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-wait" class="sub-item">"Wait" block</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-waitUntil" class="sub-item">"Wait Until" block</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-waitUntil" class="sub-item">[Start] vs [Move]</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-repeat" class="sub-item">"Repeat" block</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-forever" class="sub-item">"Forever" block</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-repeatUntil" class="sub-item">"Repeat Until" block</a></li>
+                            <li><a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#movement-key-takeaway" class="sub-item">Key-takeaways</a></li>
+                        </ul>
+
+                        <!-- <a href="different-page.html#section1">Section One</a> -->
+                        <a href=""><span class="side-bar-title-2">Part 2</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#control-ifThen" class="sub-item"> "If-Then" block</a></li>
+                            <li><a href="#control-ifElse" class="sub-item">"If-Else" block</a></li>
+                            <li><a href="#control-exit" class="sub-item">"Stop and Exit" block</a></li>
+                            <li><a href="#control-key-takeaway" class="sub-item">Observation</a></li>
+                            <li><a href="#control-quiz" class="sub-item">Quiz</a></li>
+                            <li><a href="#challengeYou" class="sub-item">Challenge for You</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+<!-- grid-container has the margin to the left-->
+<div class="grid-container-4col" id="below-header">
+
+    <!-- Introduction-->
+        <div class="grid-item">
+            <a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#wait-control">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"Wait" block</h3>
+                        <img src="https://i.ibb.co/WB9vRKd/1-control-wait.png" alt="1-control-wait">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-waitUntil">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"Wait Until" block</h3>
+                    <img src="https://i.ibb.co/dLRrmj7/2-control-wait-Until.png" alt="2-control-waitUntil">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-repeat">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"Repeat" block</h3>
+                        <img src="https://i.ibb.co/RyZR1H4/3-control-repeat.png" alt="3-control-repeat">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-forever">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"Forever" block</h3>
+                        <img src="https://i.ibb.co/zWcNqs6/4-control-forever.png" alt="4-control-forever">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://ashl3y-lin.github.io/ANS-robotic_control-part1/#control-repeatUntil">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"Repeat Until" block</h3>
+                       <img src="https://i.ibb.co/GvkKP1z/5-control-repeat-Until.png" alt="5-control-repeat-Until">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="#control-ifThen">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"If-Then" block </h3>
+                        <img src="https://i.ibb.co/6vMM1g3/6-control-if-Then.png" alt="6-control-if-Then">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="#control-ifElse">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"If-Else" block </h3>
+                        <img src="https://i.ibb.co/6XHz8Sc/7-control-If-Else.png" alt="7-control-If-Else">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item">
+            <a href="#control-exit">
+                <div class="flex-grid">
+                    <div class="flex-item">
+                        <h3>"Stop and Exit program" block </h3>
+                      <img src="https://i.ibb.co/bdV38SH/8-control-exit.png" alt="8-control-exit">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+<!-- Closure of div.grid-container -->
+</div>
+
+        <hr class="line-divider">
+
+
+ <!-- The IF-THEN section -->
+        <div class="three-columns grid-container-height" id="control-IfElse">
+            <div class="grid-item">
+                <h2>"IF-THEN" block</h2>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/6vMM1g3/6-control-if-Then.png" alt="6-control-if-Then">
+                    <p>If [something happens] Then [do something]</p>
+                    
+                </div>
+            </div>
+            <div class="grid-item unite">
+                <div class="flex-item">
+                    <img src="https://s9.gifyu.com/images/SZDeS.gif" alt="Any color (2)">
+                    <p>Notice that robot make 2 type of desicions.</p>
+                    
+                </div>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/tK8qMCt/7-1-control-if-Else.png" alt="7-1-control-if-Else">
+                    <p>If ["color sensor" reads green] Then [move <strong>FORWARD</strong> for 600 degrees at speed of 50%]</p>
+                    <p>If ["color sensor" DON'T reads green] Then [move <strong>BACKWARD</strong> for 600 degrees at speed of 50%]</p>
+                </div>
+            </div>
+        <!-- closure The div of 3-columns -->
+        </div>
+
+        <!-- The IF-THEN section -->
+        <div class="three-columns grid-container-height" id="control-ifThen">
+            <div class="grid-item">
+                <h2>"IF-THEN x3" block</h2>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/3fCZTKV/6-5-control-ifs.png" alt="6-5-control-ifs">
+                    <p>If [something happens]: robot detect something in its surrounding.</p>
+                    <p>Then [do something]: the robot will decide what to do next.</p>
+                    
+                </div>
+            </div>
+            <div class="grid-item unite">
+                <div class="flex-item">
+                    <img src="https://s9.gifyu.com/images/SZaNW.gif">
+                    <div class="paragraph-smaller">
+                        <p>Notice that robot make 4 type of desicions.</p>
+                        <p>1- <strong>IF</strong> [no color] <strong>THEN</strong> [Not move (since there's no blocks outside the loop)]</p>
+                        <p>2- <strong>IF</strong>[reads black] <strong>THEN</strong>[Move backward 500 degrees at the speed of 20].</p>
+                        <p>3- <strong>IF</strong>[reads yellow] <strong>THEN</strong>[Make a pivot turn of 600 degrees at the speed of 20].</p>
+                        <p>4- <strong>IF</strong>[reads white] <strong>THEN</strong>[Move forward 500 degrees at the speed of 20].</p>
+
+                    </div>
+                    
+                    <div class="img-smaller">
+                        <img src="https://i.ibb.co/FKxwqfK/6-6-control-ifs.png" alt="6-6-control-ifs" >
+                        <p>Notice that the order does not matter</p>
+                        
+                    </div>
+                </div>
+                    
+            </div>
+        <!-- closure The div of 3-columns -->
+        </div>
+
+        <!-- Observation area -->
+        <div class="grid-container">
+            
+            <div class="grid-item together no-background">
+                <div class="label">
+                    <h3>Observation for If-then</h3>
+                </div>
+                <p>
+                    <ul class="observation-list">
+                        <li>This loop means: if [A] happened, then [Do A]. If [A] did NOT happened [skip this loop].</li>
+                        <li>For "If-Then" block, you can add as many of this loop as you need</li>
+                        <li> For example: </li>
+                        <li>IF [the robot sees an obstacle in front of it] THEN [ it might make a turn to avoid it]</li>
+                    </ul>
+                </p>
+            </div>
+
+            </div>
+    <!-- closure grid-container  -->
+        </div>
+
+
+        <hr class="line-divider">
+    
+
+<!-- The IF-ELSE section -->
+        <div class="three-columns grid-container-height" id="control-ifElse">
+            <div class="grid-item">
+                <h2>"If-Else" block</h2>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/6vMM1g3/6-control-if-Then.png" alt="6-control-if-Then">
+                    <p> 'If-Else' gives your robot a choice. If [Option A happens], do option A. Else, if [Option A not happen], Option B happens.</p>
+                    
+                </div>
+            </div>
+            <div class="grid-item unite">
+                <div class="flex-item">
+                    <img src="https://s9.gifyu.com/images/SZDeM.gif" alt="Any color (1)">
+                    <p>'If something happens, do this. But if something else happens, do that instead!' </p>
+                    
+                </div>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/tK8qMCt/7-1-control-if-Else.png" alt="7-1-control-if-Else">
+                    <P>If [read green] then [move FORWARD 600 degrees at speed of 50%].</P>
+                    <p>Else [if NO green] then [ove BACKWARD 600 degrees at speed of 50%].</p>
+                </div>
+            </div>
+        <!-- closure The div of 3-columns -->
+        </div>
+
+        
+        <hr class="line-divider">
+
+
+        <!-- The EXIT section -->
+        <div class="three-columns grid-container-height" id="control-exit">
+            <div class="grid-item">
+                <h2>"Stop and Exit" block</h2>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/bdV38SH/8-control-exit.png" alt="8-control-exit">
+                    <p>STOP means telling your robot to take a break and EXIT means it's time for your robot to say goodbye to the program.</p>
+                    
+                </div>
+            </div>
+            <div class="grid-item unite">
+                <div class="flex-item">
+                    <img src="https://s12.gifyu.com/images/SZaNc.gif" alt="Sensor (10)">
+                    <p>1- Robot [starts moving] backward at the speed of 50%.</p>
+                    <p>2- It moves forever UNTIL the "color sensor" find red.</p>
+                    <p>3- Robot stops moving.</p>
+                    <strong><p>4- Exit the program. The robot no longer listen to the code.</p></strong>
+                    
+                </div>
+                <div class="flex-item">
+                    <img src="https://i.ibb.co/tK8qMCt/7-1-control-if-Else.png" alt="7-1-control-if-Else">
+                    <p>Notice that you don't have to press the "Stop" button on the screen. The robot turn off by itself.</p>
+                </div>
+            </div>
+        <!-- closure The div of 3-columns -->
+        </div>
+
+
+
+<div class="grid-container">
+            <!-- Observation area -->
+            <div class="grid-item together no-background" id="control-key-takeaway">
+                <div class="label">
+                    <h3>Key-Takeaways: why are loops important for programming?</h3>
+                </div>
+                <p>
+                    <ul class="observation-list">
+                        <li>-> <strong>Save Time and Effort</strong>: Instead of telling the robot to do the same thing a hundred times, you can use a loop of "Repeat".</li>
+                        <li>-><strong> Get Things Done Faster</strong>: Robots are great at doing repetitive tasks quickly.
+                        </li>
+                        <li>-> <strong>Allow the robot to make decisions</strong>: depending on its surroundings.</li>
+                        <li>-> <strong>Avoid Mistakes</strong>: With loops, you can make sure the robot repeats a task exactly the same way every time, reducing the chances of errors.</li>
+                        <li>-> <strong>Flexibility and Control</strong>: Loops give you control over how many times the robot repeats a task. </li>
+                    </ul>
+                </p>
+            </div>
+
+            </div>
+<!-- closure grid-container  -->
+    </div>
+
+
+<!-- Quiz Section -->
+    <div class="grid-container">
+        <div class="grid-item together pink-background" id="control-quiz">
+            <!-- Quiz section -->
+            <div class="app">
+                <h1>Time for a quiz!</h1>
+                <div class="quiz">
+                    <h2 id="question"> Question goes here</h2>
+                    <div id="answer-buttons">
+                        <button class="btn"> Answer 1</button>
+                        <button class="btn"> Answer 2</button>
+                        <button class="btn"> Answer 3</button>
+                        <button class="btn"> Answer 4</button>
+                    </div>
+                    <button id="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<!-- Challenge for you section -->
+        <div class="grid-item together pink-background" id="challengeYou">
+            <div class="flex-grid flex-container flex-item challenge-container">
+                <div class="letter-both">
+                    <h2>Challenge for you</h2>
+                </div>
+                <div class="flex-item">
+                    <img src="https://s12.gifyu.com/images/SZrYh.gif" alt="IMG 1391">
+                    <p>Hint:</p>
+                    <p>-> The speed of moving backward is 30%</p>
+                    <p>Use: Ultrasonic Sensor (in the sensor).</p>
+                    <img src="https://i.ibb.co/bdgztS9/Screenshot-2024-04-23-at-20-54-16.png" alt="untrasonic-hint">
+                    <p>-> Add a "Stop and Exit" block</p>
+                </div>
+
+                <div class="flex-item">
+                    <div id="hide-box">
+                        <img src="https://i.ibb.co/wdGGCdf/You-control.png" alt="You-control">
+                        <p>Notice that you need to add a spin turn in between the loops</p>
+                        <p>You can either use [Repeat Until] OR [Wait Until]</p>
+                        <p>Don's worry, we will learn the SENSORS next!</p>
+                    </div>
+                    <button class="unhide-button" onclick="ShowAnswer()">Show Answer</button>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Buttons for next -->
+    <div class="bottom-buttons">
+        <a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/"><button id="home" class="home-icon"> <img src="https://i.ibb.co/fChm6F5/home-icon-silhouette.png" alt="home-icon-silhouette" height="30"></button> </a>
+        <a href=""><button id="motors" class="next-button">Next: Color Sensor <img src="https://i.ibb.co/0CWHhM7/icons8-arrow-full-white.png" alt="icons8-arrow-full-white" height="30" ></button></a>
+       
+    </div>
+
+
+          <!-- Footer -->
+          <div class="footer-container">
+            <div class="footerNav">
+                <ul>
+                    <li><a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/#home">Home</a></li>
+                    <li><a href="https://ashl3y-lin.github.io/ANS_Robotic_Home/#topic-buttons">Topics</a></li>
+                    <li><a href="#wro">About WRO</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>Copyright &copy;2024; Designed by <span class="designer">Ashley Lin </span> | Senior 2024 | American Nicaraguan School</p>
+            </div>
+        </div>
+
+
+</div>
+    
+
+    <script src="quizSection.js"></script>
+    <script src="showAnswer.js"></script>
+    <script src="scroll-smooth.js"></script>
+</body>
+</html>
